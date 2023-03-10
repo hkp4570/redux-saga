@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3b17d9-0e8b-438c-b05b-cd978c6cdfbf" name="变更" comment="" />
+    <list default="true" id="be3b17d9-0e8b-438c-b05b-cd978c6cdfbf" name="变更" comment="redux/toolkit + redux-saga 搭建项目">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/actionTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/actionTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/saga/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/saga/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -60,11 +70,23 @@
       <option name="presentableId" value="Default" />
       <updated>1678350015238</updated>
       <workItem from="1678350016520" duration="8087000" />
-      <workItem from="1678414920264" duration="9112000" />
+      <workItem from="1678414920264" duration="17452000" />
     </task>
+    <task id="LOCAL-00001" summary="redux/toolkit + redux-saga 搭建项目">
+      <created>1678433427230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678433427230</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="redux/toolkit + redux-saga 搭建项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="redux/toolkit + redux-saga 搭建项目" />
   </component>
 </project>
