@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3b17d9-0e8b-438c-b05b-cd978c6cdfbf" name="变更" comment="API: takeEvery takeLatest takeLeading throttle">
+    <list default="true" id="be3b17d9-0e8b-438c-b05b-cd978c6cdfbf" name="变更" comment="API: take">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Layout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layout/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/saga/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/saga/index.ts" afterDir="false" />
@@ -71,7 +71,7 @@
       <workItem from="1678350016520" duration="8087000" />
       <workItem from="1678414920264" duration="18514000" />
       <workItem from="1678675541916" duration="153000" />
-      <workItem from="1678675887321" duration="5609000" />
+      <workItem from="1678675887321" duration="8025000" />
     </task>
     <task id="LOCAL-00001" summary="redux/toolkit + redux-saga 搭建项目">
       <created>1678433427230</created>
@@ -87,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678445140719</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="API: take">
+      <created>1678690953951</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678690953951</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +103,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="redux/toolkit + redux-saga 搭建项目" />
     <MESSAGE value="API: takeEvery takeLatest takeLeading throttle" />
-    <option name="LAST_COMMIT_MESSAGE" value="API: takeEvery takeLatest takeLeading throttle" />
+    <MESSAGE value="API: take" />
+    <option name="LAST_COMMIT_MESSAGE" value="API: take" />
   </component>
 </project>

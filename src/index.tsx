@@ -16,6 +16,7 @@ import TakeLatest from "./pages/takeLatest";
 import TakeLeading from "./pages/takeLeading";
 import Throttle from "./pages/throttle";
 import Take from "./pages/take";
+import Race from "./pages/race";
 
 console.log(store.getState(), 'store');
 const container = document.getElementById('root')!;
@@ -32,6 +33,7 @@ root.render(
                       <Route path={'/takeLatest'} element={<TakeLatest/>}></Route>
                       <Route path={'/takeLeading'} element={<TakeLeading/>}></Route>
                       <Route path={'/throttle'} element={<Throttle/>}></Route>
+                      <Route path={'/race'} element={<Race/>}></Route>
                       {/*<Route path={'/'} element={<App />}></Route>*/}
                   </Routes>
               </BrowserRouter>

@@ -1,4 +1,4 @@
-import {delay, call, put, take, all, fork, takeEvery, takeLatest, takeLeading, throttle, select} from "redux-saga/effects";
+import { call, put, take, all, fork, takeEvery, takeLatest, takeLeading, throttle, select,race,delay} from "redux-saga/effects";
 import {addNumber, addRandomNumber} from "../../features/sagaNumber/numberSlice";
 import {actionTypes} from "../actionTypes";
 import {getStudentData} from '../../services/index';
@@ -60,6 +60,20 @@ function* todoCreate():Generator {
     console.log('添加了一条todolist');
 }
 
+// 接口超时
+function* fetchPostWithTimeout():Generator {
+    // @ts-ignore
+    const {resp, timeout} = yield race({
+        resp: call(getStudentData,{id: 6}),
+        timeout: delay(2000),
+    })
+    if(resp){
+        console.log('接口正常获取')
+    }else{
+        console.log('接口超时')
+    }
+}
+
 
 export default function* rootSaga(){
     /**
@@ -69,6 +83,7 @@ export default function* rootSaga(){
     yield takeEvery('*', logger);
     yield takeEvery('LISTENADDTODO', watchFirstThreeTodosCreation);
     yield takeEvery('ADDTODO', todoCreate);
+    yield takeEvery('RACETIMEOUT', fetchPostWithTimeout);
     yield takeEvery(actionTypes.FETCHDATATAKEEVERY, fetchData);
     yield takeLatest(actionTypes.FETCHDATATAKELAETEST, fetchData);
     yield takeLeading(actionTypes.FETCHDATATAKELEADING, fetchData);

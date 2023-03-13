@@ -12,6 +12,7 @@ const Layout = () => {
             <Link to={'/takeLatest'}>takeLatest</Link>
             <Link to={'/takeLeading'}>takeLeading</Link>
             <Link to={'/throttle'}>throttle</Link>
+            <Link to={'/race'}>race</Link>
         </div>
     );
 };
