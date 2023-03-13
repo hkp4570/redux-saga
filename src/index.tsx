@@ -15,6 +15,7 @@ import TakeEvery from "./pages/takeEvery";
 import TakeLatest from "./pages/takeLatest";
 import TakeLeading from "./pages/takeLeading";
 import Throttle from "./pages/throttle";
+import Take from "./pages/take";
 
 console.log(store.getState(), 'store');
 const container = document.getElementById('root')!;
@@ -26,6 +27,7 @@ root.render(
               <BrowserRouter>
                   <Routes>
                       <Route path="/" element={<Layout />}></Route>
+                      <Route path={'/take'} element={<Take/>}></Route>
                       <Route path={'/takeEvery'} element={<TakeEvery/>}></Route>
                       <Route path={'/takeLatest'} element={<TakeLatest/>}></Route>
                       <Route path={'/takeLeading'} element={<TakeLeading/>}></Route>

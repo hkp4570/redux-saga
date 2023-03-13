@@ -1,4 +1,4 @@
-import {delay, call, put, take, all, fork, takeEvery, takeLatest, takeLeading, throttle} from "redux-saga/effects";
+import {delay, call, put, take, all, fork, takeEvery, takeLatest, takeLeading, throttle, select} from "redux-saga/effects";
 import {addNumber, addRandomNumber} from "../../features/sagaNumber/numberSlice";
 import {actionTypes} from "../actionTypes";
 import {getStudentData} from '../../services/index';
@@ -6,12 +6,16 @@ import {setStudentData} from "../../features/studentSlice";
 
 
 function* add(){
-    while(true){
+    for (let i = 0; i < 3; i++) {
         // @ts-ignore
-        yield take(actionTypes.ADDNUMBER);
-        yield put(addNumber());
+        const action = yield take(actionTypes.ADDNUMBER);
+        console.log(action)
     }
-    console.log('saga add');
+    // while(true){
+    //     // @ts-ignore
+    //     yield take(actionTypes.ADDNUMBER);
+    //     yield put(addNumber());
+    // }
 }
 
 function* asyncAdd(){
@@ -36,7 +40,35 @@ function* fetchData(action:any){
     yield put(setStudentData(data));
 }
 
+function* logger(action:any):Generator{
+    const state = yield select();
+
+    console.log(action,'action');
+    console.log(state, 'after state');
+}
+
+function* watchFirstThreeTodosCreation():Generator {
+    for (let i = 0; i < 3; i++) {
+        const action = yield take('ADDTODO');
+        console.log('监听到了TODO添加');
+    }
+    console.log('3条TODO添加完成');
+    yield put({type: 'SHOW_CONGRATULATION'})
+}
+
+function* todoCreate():Generator {
+    console.log('添加了一条todolist');
+}
+
+
 export default function* rootSaga(){
+    /**
+     * 监听所有的action
+     * 问题：被调佣的任务无法控制何时被调用，无法控制何时停止监听
+     */
+    yield takeEvery('*', logger);
+    yield takeEvery('LISTENADDTODO', watchFirstThreeTodosCreation);
+    yield takeEvery('ADDTODO', todoCreate);
     yield takeEvery(actionTypes.FETCHDATATAKEEVERY, fetchData);
     yield takeLatest(actionTypes.FETCHDATATAKELAETEST, fetchData);
     yield takeLeading(actionTypes.FETCHDATATAKELEADING, fetchData);

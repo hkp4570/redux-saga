@@ -7,6 +7,7 @@ const Layout = () => {
             display: 'flex',
             justifyContent: 'space-around'
         }}>
+            <Link to={'/take'}>take</Link>
             <Link to={'/takeEvery'}>takeEvery</Link>
             <Link to={'/takeLatest'}>takeLatest</Link>
             <Link to={'/takeLeading'}>takeLeading</Link>
